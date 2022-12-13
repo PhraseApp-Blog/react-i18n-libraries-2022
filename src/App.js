@@ -7,11 +7,13 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
+        logo: "logo",
         demo: "This demo app was internationalized by i18next",
       },
     },
     ar: {
       translation: {
+        logo: "رمز التطبيق",
         demo: "تم تدويل هذا التطبيق التجريبي بواسطة آي ايتين نكست",
       },
     },
@@ -32,13 +34,13 @@ function App() {
   return (
     <div className="app">
       <header className="app__header">
-        <img src={logo} className="app__logo" alt="logo" />
-        <a href="#" className="app__link" onClick={() => setLocale("en")}>
+        <img src={logo} className="app__logo" alt={t("logo")} />
+        <button className="app__link" onClick={() => setLocale("en")}>
           English
-        </a>
-        <a href="#" className="app__link" onClick={() => setLocale("ar")}>
+        </button>
+        <button className="app__link" onClick={() => setLocale("ar")}>
           Arabic
-        </a>
+        </button>
       </header>
 
       <main className="app__main">
