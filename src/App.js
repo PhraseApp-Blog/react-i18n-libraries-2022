@@ -1,9 +1,9 @@
-import i18n from "i18next";
+import i18next from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
 import logo from "./logo.svg";
 import "./App.css";
 
-i18n.use(initReactI18next).init({
+i18next.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
