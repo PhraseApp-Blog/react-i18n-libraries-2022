@@ -27,18 +27,14 @@ i18n.use(initReactI18next).init({
 function App() {
   const { t, i18n } = useTranslation();
 
-  function setLocale(newLocale) {
-    i18n.changeLanguage(newLocale);
-  }
-
   return (
     <div className="app">
       <header className="app__header">
         <img src={logo} className="app__logo" alt={t("logo")} />
-        <button className="app__link" onClick={() => setLocale("en")}>
+        <button className="app__link" onClick={() => i18n.changeLanguage("en")}>
           English
         </button>
-        <button className="app__link" onClick={() => setLocale("ar")}>
+        <button className="app__link" onClick={() => i18n.changeLanguage("ar")}>
           Arabic
         </button>
       </header>
