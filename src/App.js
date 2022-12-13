@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -9,8 +9,9 @@ function App() {
       </header>
 
       <main className="app__main">
-        <p>This demo React app will be internationalized by various i18n
-          libaries.
+        <p>
+          This demo React app will be internationalized by various i18n
+          libraries.
         </p>
       </main>
     </div>
