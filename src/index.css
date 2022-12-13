@@ -13,9 +13,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 button {
-  background: none !important;
+  background: none;
   border: none;
-  padding: 0 !important;
+  padding: 0;
   font-size: 18px;
   text-decoration: underline;
   cursor: pointer;
