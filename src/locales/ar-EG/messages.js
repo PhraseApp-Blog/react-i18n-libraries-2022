@@ -1,1 +1,1 @@
-/*eslint-disable*/module.exports={messages:{"Current date and time are {0}":["التاريخ والوقت الحاليان هما ",["0"]],"This demo app was internationalized using LinguiJS":"تم تدويل هذا التطبيق التجريبي باستخدام لنجوي"}};
+/*eslint-disable*/module.exports={messages:{"Current date and time are {0}":["التاريخ والوقت الحاليان هما ",["0"]],"This demo app was internationalized using LinguiJS":"تم تدويل هذا التطبيق التجريبي باستخدام لنجوي","logo":"رمز التطبيق","{0}":[["0"]]}};

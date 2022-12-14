@@ -1,4 +1,4 @@
-import { Trans } from "@lingui/macro";
+import { Trans, t } from "@lingui/macro";
 import { useLingui } from "@lingui/react";
 import logo from "./logo.svg";
 import "./App.css";
@@ -9,7 +9,11 @@ function App({ onLocaleChanged }) {
   return (
     <div className="app">
       <header className="app__header">
-        <img src={logo} className="app__logo" alt="logo" />
+        <img
+          src={logo}
+          className="app__logo"
+          alt={t({ id: "logo", message: "logo" })}
+        />
         <button className="app__link" onClick={() => onLocaleChanged("en-US")}>
           English
         </button>
