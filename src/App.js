@@ -1,40 +1,28 @@
-import { IntlProvider, FormattedMessage } from "react-intl";
-import { useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
 import logo from "./logo.svg";
 import "./App.css";
 
-const messages = {
-  en: {
-    demo: "This demo app was internationalized by react-intl",
-  },
-  ar: {
-    demo: "تم تدويل هذا التطبيق التجريبي بواسطة رياكت إنتل",
-  },
-};
-
-function App() {
-  const [locale, setLocale] = useState("en");
+function App({ onLocaleChanged }) {
+  const intl = useIntl();
 
   return (
-    <IntlProvider messages={messages[locale]} locale={locale}>
-      <div className="app">
-        <header className="app__header">
-          <img src={logo} className="app__logo" alt="logo" />
-          <a href="#" className="app__link" onClick={() => setLocale("en")}>
-            English
-          </a>
-          <a href="#" className="app__link" onClick={() => setLocale("ar")}>
-            Arabic
-          </a>
-        </header>
+    <div className="app">
+      <header className="app__header">
+        <img src={logo} className="app__logo" alt={intl.$t({ id: "logo" })} />
+        <button className="app__link" onClick={() => onLocaleChanged("en")}>
+          English
+        </button>
+        <button className="app__link" onClick={() => onLocaleChanged("ar")}>
+          Arabic
+        </button>
+      </header>
 
-        <main className="app__main">
-          <p>
-            <FormattedMessage id="demo" />
-          </p>
-        </main>
-      </div>
-    </IntlProvider>
+      <main className="app__main">
+        <p>
+          <FormattedMessage id="demo" />
+        </p>
+      </main>
+    </div>
   );
 }
 
