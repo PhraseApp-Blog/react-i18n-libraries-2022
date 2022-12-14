@@ -9,10 +9,10 @@ function App({ onLocaleChanged }) {
     <div className="app">
       <header className="app__header">
         <img src={logo} className="app__logo" alt={intl.$t({ id: "logo" })} />
-        <button className="app__link" onClick={() => onLocaleChanged("en")}>
+        <button className="app__link" onClick={() => onLocaleChanged("en-US")}>
           English
         </button>
-        <button className="app__link" onClick={() => onLocaleChanged("ar")}>
+        <button className="app__link" onClick={() => onLocaleChanged("ar-EG")}>
           Arabic
         </button>
       </header>
@@ -20,6 +20,9 @@ function App({ onLocaleChanged }) {
       <main className="app__main">
         <p>
           <FormattedMessage id="demo" />
+        </p>
+        <p>
+          <FormattedMessage id="now" values={{ currentDateTime: Date.now() }} />
         </p>
       </main>
     </div>
