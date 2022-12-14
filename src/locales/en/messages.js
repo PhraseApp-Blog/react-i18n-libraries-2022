@@ -1,1 +1,0 @@
-/*eslint-disable*/module.exports={messages:{"This demo app was internationalized using lingui":"This demo app was internationalized using lingui"}};

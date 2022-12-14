@@ -1,9 +1,9 @@
 {
   "locales": [
-    "en",
-    "ar"
+    "en-US",
+    "ar-EG"
   ],
-  "sourceLocale": "en",
+  "sourceLocale": "en-US",
   "catalogs": [
     {
       "path": "src/locales/{locale}/messages",

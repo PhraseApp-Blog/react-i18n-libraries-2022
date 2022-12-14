@@ -1,45 +1,39 @@
-import { useEffect, useState } from "react";
-import { i18n } from "@lingui/core";
-import { I18nProvider } from "@lingui/react";
 import { Trans } from "@lingui/macro";
-import { messages as enMessages } from "./locales/en/messages";
-import { messages as arMessages } from "./locales/ar/messages";
+import { useLingui } from "@lingui/react";
 import logo from "./logo.svg";
 import "./App.css";
 
-const messages = {
-  en: enMessages,
-  ar: arMessages,
-};
-
-function App() {
-  const [locale, setLocale] = useState("en");
-
-  useEffect(() => {
-    i18n.load(locale, messages[locale]);
-    i18n.activate(locale);
-  }, [locale]);
+function App({ onLocaleChanged }) {
+  const { i18n } = useLingui();
 
   return (
-    <I18nProvider i18n={i18n}>
-      <div className="app">
-        <header className="app__header">
-          <img src={logo} className="app__logo" alt="logo" />
-          <a href="#" className="app__link" onClick={() => setLocale("en")}>
-            English
-          </a>
-          <a href="#" className="app__link" onClick={() => setLocale("ar")}>
-            Arabic
-          </a>
-        </header>
+    <div className="app">
+      <header className="app__header">
+        <img src={logo} className="app__logo" alt="logo" />
+        <button className="app__link" onClick={() => onLocaleChanged("en-US")}>
+          English
+        </button>
+        <button className="app__link" onClick={() => onLocaleChanged("ar-EG")}>
+          Arabic
+        </button>
+      </header>
 
-        <main className="app__main">
-          <p>
-            <Trans>This demo app was internationalized using lingui</Trans>
-          </p>
-        </main>
-      </div>
-    </I18nProvider>
+      <main className="app__main">
+        <p>
+          <Trans>This demo app was internationalized using LinguiJS</Trans>
+        </p>
+
+        <p>
+          <Trans>
+            Current date and time are{" "}
+            {i18n.date(Date.now(), {
+              dateStyle: "medium",
+              timeStyle: "medium",
+            })}
+          </Trans>
+        </p>
+      </main>
+    </div>
   );
 }
 

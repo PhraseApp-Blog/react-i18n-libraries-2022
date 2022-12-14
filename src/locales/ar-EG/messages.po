@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-13 13:45+0100\n"
+"POT-Creation-Date: 2022-12-14 17:49+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
-"Language: ar\n"
+"Language: ar-EG\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: \n"
@@ -13,6 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/App.js:38
-msgid "This demo app was internationalized using lingui"
+#: src/App.js:27
+msgid "Current date and time are {0}"
+msgstr "التاريخ والوقت الحاليان هما {0}"
+
+#: src/App.js:23
+msgid "This demo app was internationalized using LinguiJS"
 msgstr "تم تدويل هذا التطبيق التجريبي باستخدام لنجوي"

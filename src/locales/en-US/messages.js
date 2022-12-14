@@ -1,0 +1,1 @@
+/*eslint-disable*/module.exports={messages:{"Current date and time are {0}":["Current date and time are ",["0"]],"This demo app was internationalized using LinguiJS":"This demo app was internationalized using LinguiJS"}};
